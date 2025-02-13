@@ -1,0 +1,149 @@
+/* إعدادات أساسية */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+    color: #fff;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* الأزرار */
+.button, .claim-button, .btn-outline, .btn-filled {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.button:hover, .claim-button:hover, .btn-outline:hover, .btn-filled:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+/* تأثيرات التمرير على العناصر */
+.feature-box, .content, .form-container {
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.feature-box.visible, .content.visible, .form-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* الحركات عند التمرير */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تعديل الألوان لكل الصفحة */
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 50px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* النصوص */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* تخصيص النماذج */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border: 2px solid #4CAF50;
+}
+
+/* تخصيص الأيقونات */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+footer {
+    font-size: 14px;
+}
+
+/* القائمة المنسدلة */
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* التحسينات التفاعلية */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
