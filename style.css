@@ -1,87 +1,95 @@
-/* Global Styles /
+/* General Styles */
 body {
-font-family: 'Roboto', sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f9f9f9; / Light background for contrast /
-color: #333; / Default text color */
-line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0F29;
+    color: white;
+    text-align: center;
 }
-/* Headings */
-h1, h2, h3 {
-font-family: 'Montserrat', sans-serif;
-margin: 20px 0;
-}
-/* Link Styles /
-a {
-color: #003d99; / Dark blue, adjust for branding /
-text-decoration: none;
-transition: color 0.3s ease;
-}
-a:hover {
-color: #00cc66; / Green hover effect */
-}
-/* Button Styles /
-.button {
-background-color: #00cc66; / Green button /
-color: white;
-padding: 12px 24px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: transform 0.3s ease, background-color 0.3s ease;
-font-size: 16px;
-}
-.button:hover {
-transform: scale(1.05); / Enlarging effect /
-background-color: #003d99; / Change to dark blue */
-}
-/* Section Separator /
-.separator {
-border-bottom: 1px solid #ccc; / Thin gray line */
-margin: 40px 0;
-}
-/* Container Styles */
+
+/* Container */
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #111A45;
+    padding: 20px;
+    border-radius: 10px;
 }
-/* Image and Icon Styles /
-.img-hover-effect {
-transition: transform 0.3s ease, filter 0.3s ease; / Add smooth transition /
+
+/* Header */
+header {
+    background: #4B0082;
+    color: #FFA500;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
 }
-.img-hover-effect:hover {
-transform: scale(1.05); / Slightly enlarges the image /
-filter: brightness(0.9); / Darkens image on hover */
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
-/* Animations for Scroll */
-.fade-in {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+/* Content */
+.content h2 {
+    font-size: 24px;
+    margin-top: 20px;
 }
-.fade-in.visible {
-opacity: 1;
-transform: translateY(0);
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 10px;
 }
-/* Responsive Design /
-@media (max-width: 768px) {
-body {
-padding: 0 10px; / Smaller padding on mobile /
+
+form {
+    width: 70%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.button {
-width: 100%; / Full width on mobile */
-padding: 14px;
+
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 15px;
 }
+
+.btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
-/* Utility Classes */
-.text-center {
-text-align: center;
+
+.btn:hover {
+    background-color: #e91e63;
 }
-.mt-20 {
-margin-top: 20px;
-}
-.mb-20 {
-margin-bottom: 20px;
+
+/* Claim Button */
+.claim-button {
+    display: block;
+    background-color: #FF4081;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
 }
