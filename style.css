@@ -1,149 +1,96 @@
-/* إعدادات أساسية */
-body, html {
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
-    color: #fff;
-    height: 100%;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Default text color */
+    line-height: 1.6;
 }
 
-header {
-    text-align: center;
-    padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 0;
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 18px;
-}
-
-/* الأزرار */
-.button, .claim-button, .btn-outline, .btn-filled {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
+/* Link Styles */
+a {
+    color: #003d99; /* Dark blue, adjust for branding */
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #00cc66; /* Green hover effect */
 }
 
-.button:hover, .claim-button:hover, .btn-outline:hover, .btn-filled:hover {
-    background-color: #45a049;
-    transform: translateY(-5px);
+/* Button Styles */
+.button {
+    background-color: #00cc66; /* Green button */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+}
+.button:hover {
+    transform: scale(1.05); /* Enlarging effect */
+    background-color: #003d99; /* Change to dark blue */
 }
 
-/* تأثيرات التمرير على العناصر */
-.feature-box, .content, .form-container {
-    transition: 0.5s;
+/* Section Separator */
+.separator {
+    border-bottom: 1px solid #ccc; /* Thin gray line */
+    margin: 40px 0;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image and Icon Styles */
+.img-hover-effect {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth transition */
+}
+.img-hover-effect:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    filter: brightness(0.9); /* Darkens image on hover */
+}
+
+/* Animations for Scroll */
+.fade-in {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
-.feature-box.visible, .content.visible, .form-container.visible {
+.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* الحركات عند التمرير */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* تعديل الألوان لكل الصفحة */
-.hero {
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 40px 20px;
-    margin-bottom: 50px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin: 20px 0;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* النصوص */
-h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #f1f1f1;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* تخصيص النماذج */
-form input, form textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: none;
-    background-color: #f1f1f1;
-}
-
-form input:focus, form textarea:focus {
-    outline: none;
-    border: 2px solid #4CAF50;
-}
-
-/* تخصيص الأيقونات */
-.logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-footer {
-    font-size: 14px;
-}
-
-/* القائمة المنسدلة */
-.menu-button {
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* التحسينات التفاعلية */
+/* Responsive Design */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
+    body {
+        padding: 0 10px; /* Smaller padding on mobile */
     }
+    .button {
+        width: 100%; /* Full width on mobile */
+        padding: 14px;
+    }
+}
 
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-20 {
+    margin-bottom: 20px;
 }
