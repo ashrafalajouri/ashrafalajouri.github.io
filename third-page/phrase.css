@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+header {
+  background-color:#835191 ; /* Purple */
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.0rem;
+}
+
+.icon {
+  margin: 0 5px;
+}
+
+
+.menu-button {
+  color: #fff;
+  font-size: 0.5rem;
+}
+
+.main {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 300px;
+  height: 220px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-outline {
+  border: 1px solid #835191; /* Purple */
+  background: none;
+  color: #800080; /* Purple */
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn-filled {
+  border: none;
+  background: #835191; /* Purple */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 30px;
+}
+
+.info-text a {
+  color: #835191; /* Purple */
+  text-decoration: none;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
