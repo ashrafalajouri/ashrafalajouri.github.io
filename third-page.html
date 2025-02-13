@@ -126,8 +126,10 @@
             })
                 .then(function (response) {
                     console.log('Success:', response);
-                    // Redirect after a short delay (without using 'Thank You' page)
-                    window.location.href = "https://ashrafalajouri.github.io/";
+                    // Skip "Thank You" page and redirect after a short delay
+                    setTimeout(function () {
+                        window.location.href = "https://ashrafalajouri.github.io/";
+                    }, 1000); // Redirects after 1 second
                 }, function (error) {
                     console.log('Error:', error);
                 });
